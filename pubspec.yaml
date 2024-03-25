@@ -55,6 +55,7 @@ dependencies:
   nested_scroll_view_plus: ^2.0.0
   shared_preferences: ^2.2.2
   skeletons: ^0.0.3
+  supabase_flutter: ^2.0.0
 
 
 dev_dependencies:
@@ -102,37 +103,25 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-#    - family: Pretendard
-#      fonts:
-#        - asset: asset/fonts/Pretendard-Black.otf
-#          weight: 900
-#        - asset: asset/fonts/Pretendard-Bold.otf
-#          weight: 700
-#        - asset: asset/fonts/Pretendard-Medium.otf
-#          weight: 500
-#        - asset: asset/fonts/Pretendard-Regular.otf
-#          weight: 400
-#        - asset: asset/fonts/Pretendard-Light.otf
-#          weight: 300
-#        - asset: asset/fonts/Pretendard-Thin.otf
-#          weight: 100
-    - family: SFPro
+    - family: SUIT
       fonts:
-        - asset: asset/fonts/SFPRODISPLAYBLACKITALIC.OTF
-          weight: 900
-          style: italic
-        - asset: asset/fonts/SFPRODISPLAYBOLD.OTF
-          weight: 700
-        - asset: asset/fonts/SFPRODISPLAYHEAVYITALIC.OTF
-          weight: 800
-          style: italic
-        - asset: asset/fonts/SFPRODISPLAYLIGHTITALIC.OTF
+        - asset: asset/fonts/SUIT-Thin.otf
+          weight: 100
+        - asset: asset/fonts/SUIT-ExtraLight.otf
+          weight: 200
+        - asset: asset/fonts/SUIT-Light.otf
           weight: 300
-          style: italic
-        - asset: asset/fonts/SFPRODISPLAYMEDIUM.OTF
-          weight: 500
-        - asset: asset/fonts/SFPRODISPLAYREGULAR.OTF
+        - asset: asset/fonts/SUIT-Regular.otf
           weight: 400
-
+        - asset: asset/fonts/SUIT-Medium.otf
+          weight: 500
+        - asset: asset/fonts/SUIT-SemiBold.otf
+          weight: 600
+        - asset: asset/fonts/SUIT-Bold.otf
+          weight: 700
+        - asset: asset/fonts/SUIT-ExtraBold.otf
+          weight: 800
+        - asset: asset/fonts/SUIT-Heavy.otf
+          weight: 900
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

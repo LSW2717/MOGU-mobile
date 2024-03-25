@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mogu_mobile/common/const/colors.dart';
+import 'package:mogu_mobile/common/const/typography.dart';
 
 class DefaultLayout extends StatelessWidget {
   final Color? backgroundColor;
@@ -11,6 +12,7 @@ class DefaultLayout extends StatelessWidget {
   final String? title;
   final Widget? bottomNavigationBar;
   final bool needBackButton;
+  final bool? needAlarm;
   final Widget? action;
   final bool extendBodyBehindAppBar;
 
@@ -20,6 +22,7 @@ class DefaultLayout extends StatelessWidget {
     this.title,
     this.bottomNavigationBar,
     this.needBackButton = false,
+    this.needAlarm = true,
     this.action,
     this.extendBodyBehindAppBar = false,
     super.key,
@@ -48,12 +51,12 @@ class DefaultLayout extends StatelessWidget {
           width: 105.w,
           height: 24.w,
         ),
-        actions: [
+        actions: needAlarm == true ?  [
           IconButton(
             onPressed: () {},
             icon: const Icon(CupertinoIcons.bell_fill,color: Colors.white,),
           ),
-        ],
+        ] : null,
       );
     } else {
       return AppBar(
@@ -84,12 +87,7 @@ class DefaultLayout extends StatelessWidget {
         ),
         title: Text(
           title!,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 16.0,
-            fontFamily: 'SFPro',
-            fontWeight: FontWeight.w700,
-          ),
+          style: headerText1,
         ),
         actions: action != null
             ? [

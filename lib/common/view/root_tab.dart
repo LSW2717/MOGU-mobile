@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -22,7 +24,7 @@ class RootTab extends ConsumerWidget {
     return DefaultLayout(
       title: _getTitleFromTabIndex(currentIndex),
       needBackButton: false,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       bottomNavigationBar: Stack(
         children: [
           Container(
@@ -41,12 +43,12 @@ class RootTab extends ConsumerWidget {
             unselectedItemColor: Colors.white,
             selectedFontSize: 12.sp,
             unselectedFontSize: 12.sp,
-            selectedLabelStyle: TextStyle(
-              fontFamily: 'SFPro',
+            selectedLabelStyle: const TextStyle(
+              fontFamily: 'SUIT',
               fontWeight: FontWeight.w400,
             ),
-            unselectedLabelStyle: TextStyle(
-              fontFamily: 'SFPro',
+            unselectedLabelStyle: const TextStyle(
+              fontFamily: 'SUIT',
               fontWeight: FontWeight.w400,
             ),
             type: BottomNavigationBarType.fixed,
@@ -65,6 +67,14 @@ class RootTab extends ConsumerWidget {
                   ),
                 ),
                 label: '홈',
+                activeIcon: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 8.w),
+                  child: SvgPicture.asset(
+                    'asset/svg/homeclick.svg',
+                    height: 22.w,
+                    width: 22.w,
+                  ),
+                ),
               ),
               BottomNavigationBarItem(
                 icon: Padding(
@@ -76,6 +86,14 @@ class RootTab extends ConsumerWidget {
                   ),
                 ),
                 label: '카테고리',
+                activeIcon: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 11.w),
+                  child: SvgPicture.asset(
+                    'asset/svg/categoryclick.svg',
+                    height: 18.w,
+                    width: 18.w,
+                  ),
+                ),
               ),
               BottomNavigationBarItem(
                 icon: Padding(
@@ -87,6 +105,14 @@ class RootTab extends ConsumerWidget {
                   ),
                 ),
                 label: '검색',
+                activeIcon: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 8.w),
+                  child: SvgPicture.asset(
+                    'asset/svg/searchclick.svg',
+                    height: 22.w,
+                    width: 22.w,
+                  ),
+                ),
               ),
               BottomNavigationBarItem(
                 icon: Padding(
@@ -98,12 +124,28 @@ class RootTab extends ConsumerWidget {
                   ),
                 ),
                 label: '채팅',
+                activeIcon: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 8.w),
+                  child: SvgPicture.asset(
+                    'asset/svg/chatclick.svg',
+                    height: 22.w,
+                    width: 22.w,
+                  ),
+                ),
               ),
               BottomNavigationBarItem(
                 icon: Padding(
                   padding: EdgeInsets.symmetric(vertical: 7.w),
                   child: SvgPicture.asset(
                     'asset/svg/profile.svg',
+                    height: 26.w,
+                    width: 26.w,
+                  ),
+                ),
+                activeIcon: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 7.w),
+                  child: SvgPicture.asset(
+                    'asset/svg/profileclick.svg',
                     height: 26.w,
                     width: 26.w,
                   ),

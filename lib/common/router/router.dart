@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:mogu_mobile/auth/view/sign_in_view.dart';
 
-import '../../home/view/home_view.dart';
 import '../view/root_tab.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
@@ -11,6 +11,12 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/',
         builder: (context, state) => const RootTab(),
+        routes: [
+          GoRoute(
+            path: 'login',
+            builder: (context, state) => const SignInView(),
+          )
+        ],
       ),
     ],
   );

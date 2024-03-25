@@ -58,9 +58,9 @@ class HomeView extends StatelessWidget {
             ),
             SliverToBoxAdapter(
               child:Container(
-                height: 300.w,
+                height: 310.w,
                 color: primaryColor,
-                child: TabBarView(
+                child: const TabBarView(
                   children: <Widget>[
                     InActivityView(),
                     OutActivityView(),
@@ -84,9 +84,9 @@ class HomeView extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
                 clipBehavior: Clip.antiAlias,
                 decoration: ShapeDecoration(
-                  color: Color(0xFFF1F3F9),
+                  color: const Color(0xFFF1F3F9),
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(width: 1, color: Color(0xFFE7EBF5)),
+                    side: const BorderSide(width: 1, color: Color(0xFFE7EBF5)),
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
